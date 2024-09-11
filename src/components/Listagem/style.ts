@@ -20,9 +20,11 @@ export const Botao = styled.div<Props>`
     font-weight: 700;
 `;
 
-export const Imagemrestaurante = styled.img`
+export const Imagemrestaurante = styled.div`
     height: 217px;
     width: 472px;
+    background-image:url('public/sushi.png');
+     background-size: cover;
 `;
 
 export const Descricao = styled.p`
@@ -37,6 +39,8 @@ export const Paragrafo = styled.p<Props>`
 
 
 export const Nota = styled.p`
+
+    display:flex;
     img {
         height: 20px;
         width: 21px;
