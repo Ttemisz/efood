@@ -1,10 +1,11 @@
+import Body from "../../Body"
 import Hero from "../../Hero"
-import Listagem from "../../Listagem"
+
 
 const Home =()=>(
     <>
         <Hero></Hero>
-        <Listagem></Listagem>
+        <Body></Body>
     </>
 )
 

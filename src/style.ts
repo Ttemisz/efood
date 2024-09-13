@@ -21,10 +21,13 @@ export const Cores = {
 
 }
 
-export const Container = {
-  width:'1024px'
+export const Container = styled.div`
+  width: 1024px;
+  max-width: 100%;
+  margin: 0 auto; 
   
-}
+`
+
 
 export const Logo = styled.img`
   height:57.5px;
