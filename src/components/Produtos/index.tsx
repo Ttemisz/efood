@@ -1,4 +1,4 @@
-import { Container } from "../style"
+import { Container } from "../../style"
 import { Item, Itens } from "./style"
 
 const Produtos = () =>(

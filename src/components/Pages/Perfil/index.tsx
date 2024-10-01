@@ -1,4 +1,4 @@
-import Produtos from "../../../Produtos"
+import Produtos from "../../Produtos"
 import Apresentacao from "../../Apresentacao"
 import Footer from "../../footer"
 import Headerperfil from "../../Header"
