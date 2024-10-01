@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Botao, Descricao, Imagemrestaurante, Nota, Paragrafo, Restaurante } from "./style";
 
 
@@ -14,7 +15,7 @@ export type Props = {
 };
 
 
-const Fragmento = ({ size = 'small', children }: Props) => (
+export const Fragmento = ({ size = 'small', children }: Props) => (
     <Paragrafo size={size}>{children}</Paragrafo>
 );
 
@@ -52,7 +53,11 @@ const Restaurantes = ({nome,nota,descricao,image,italia}:Props) => (
                     {descricao}
                 </p>
             </Fragmento>
-            <Botao>Saiba mais</Botao> 
+            <Link to='/perfil'>
+                <Botao>Saiba mais
+                    
+                </Botao> 
+            </Link>
         </Descricao>
     </Restaurante>
 );

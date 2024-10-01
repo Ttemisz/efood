@@ -16,11 +16,14 @@ export const Rodape = styled.footer`
     }
 
     p{
-       color:${Cores.VermelhoCoral}
-       text-align:center; 
+        font-size:10px;
+        width:480px;
+        text-align:center;
     }
+
+    
 `;
-// por algum motivo quando eu coloco alguma outra tag alem no color na tag p , para de funcinonar qualquer outro css
+
 
 export const Rodapelinks = styled.ul`
     display:flex;
@@ -34,7 +37,4 @@ export const Rodapelinks = styled.ul`
             width:24px;
         }
     }
-     
 `
-
-   
