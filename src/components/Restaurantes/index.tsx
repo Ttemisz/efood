@@ -46,7 +46,7 @@ const Restaurantes = ({nome,nota,descricao,image,italia}:Props) => (
         <Descricao>
             <div className="restaurante_nota">
                 <Fragmento size="big">{nome} </Fragmento>
-                <Nota><Fragmento size="big">{nota}</Fragmento><img src='public\estrela.png' alt="" /></Nota>
+                <Nota><Fragmento size="big">{nota}</Fragmento><img src='./public/estrela.png' alt="" /></Nota>
             </div>
             <Fragmento>
                 <p>

@@ -3,7 +3,7 @@ import { HeaderBar, Title } from "./style"
 
 const Hero =() =>(
   <HeaderBar>
-    <Logo src="public/efood.png"></Logo>
+    <Logo src="./public/efood.png"></Logo>
     <Title>Viva experiências gastronômicas <br></br>no conforto da sua casa</Title>
   </HeaderBar>
 )

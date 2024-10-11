@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-background-image:url('public/garfofaca.png');
+background-image:url('./public/garfofaca.png');
 background-size: cover;
 
 
