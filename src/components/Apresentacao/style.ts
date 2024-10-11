@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { Props } from ".";
 import { Cores } from "../../style";
 
+
 export const Fundo = styled.div`
 
-    background-image: url('./public/macarraoescuro.png');
+    background-image: url('/macarraoescuro.png');
     background-position: center ;
     height: 280px;
     background-size:cover;

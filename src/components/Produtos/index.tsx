@@ -8,7 +8,7 @@ const Produtos = () =>(
             <div>
                 <Item>
                     
-                    <img src="./public/Pizza.png" alt="" />
+                    <img src="/Pizza.png" alt="" />
                     <h1>Pizza Marguerita</h1>
                     <p>A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!</p>
                     <div>
@@ -16,7 +16,7 @@ const Produtos = () =>(
                     </div>
                 </Item>
                 <Item>
-                <img src="./public/Pizza.png" alt="" />
+                <img src="/Pizza.png" alt="" />
                 <h1>Pizza Marguerita</h1>
                     <p>A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!</p>
                     <div>
@@ -26,7 +26,7 @@ const Produtos = () =>(
             </div>
             <div>
                 <Item>
-                    <img src="./public/Pizza.png" alt="" />
+                    <img src="/Pizza.png" alt="" />
                     <h1>Pizza Marguerita</h1>
                     <p>A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!</p>
                     <div>
@@ -34,7 +34,7 @@ const Produtos = () =>(
                     </div>
                 </Item>
                 <Item>
-                    <img src="./public/Pizza.png" alt="" />
+                    <img src="/Pizza.png" alt="" />
                     <h1>Pizza Marguerita</h1>
                     <p>A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!</p>
                     <div>
@@ -44,7 +44,7 @@ const Produtos = () =>(
             </div>
             <div>
                 <Item>
-                    <img src="./public/Pizza.png" alt="" />
+                    <img src="/Pizza.png" alt="" />
                     <h1>Pizza Marguerita</h1>
                     <p>A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!</p>
                     <div>
@@ -52,7 +52,7 @@ const Produtos = () =>(
                     </div>
                 </Item>
                 <Item>
-                    <img src="./public/Pizza.png" alt="" />
+                    <img src="/Pizza.png" alt="" />
                     <h1>Pizza Marguerita</h1>
                     <p>A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!</p>
                     <div>

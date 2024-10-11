@@ -4,16 +4,16 @@ import { Rodape, Rodapelinks} from "./style"
 const Footer = () =>(
 
         <Rodape>
-        <img src="./public/efood.png" alt="" />
+        <img src="/efood.png" alt="" />
         <Rodapelinks>
             <li>
-                <img src="./public/instagramlg.png" alt="" />
+                <img src="/instagramlg.png" alt="" />
             </li>
             <li>
-                <img src="./public/facebooklg.png" alt="" />
+                <img src="/facebooklg.png" alt="" />
             </li>
             <li>
-                <img src="./public/twitterlg.png" alt="" />
+                <img src="/twitterlg.png" alt="" />
             </li>
         </Rodapelinks>
             <Fragmento>

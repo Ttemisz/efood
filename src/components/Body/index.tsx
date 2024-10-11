@@ -16,7 +16,7 @@ const Body = () => {
                             embalagens cuidadosas e qualidade garantida. Experimente o Japão sem sair do lar 
                             com nosso delivery!"
                             nota="4.9"
-                            image='./public/sushi.png'
+                            image='/sushi.png'
                             italia = {false}
                         />
                         <Restaurantes 
@@ -25,7 +25,7 @@ const Body = () => {
                             Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, 
                             tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
                             nota="4.6"
-                            image="./public/macarrao.png"
+                            image="/macarrao.png"
                         />
                         <Restaurantes 
                             nome='La Dolce Vita Trattoria' 
@@ -33,7 +33,7 @@ const Body = () => {
                             Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, 
                             tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
                             nota="4.6"
-                            image="./public/macarrao.png"
+                            image="/macarrao.png"
                         />
                     </div>
                     <div>
@@ -43,7 +43,7 @@ const Body = () => {
                             Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, 
                             tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
                             nota="4.6"
-                            image="./public/macarrao.png"
+                            image="/macarrao.png"
                         />
                         <Restaurantes 
                             nome='La Dolce Vita Trattoria' 
@@ -51,7 +51,7 @@ const Body = () => {
                             Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, 
                             tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
                             nota="4.6"
-                            image="./public/macarrao.png"
+                            image="/macarrao.png"
                         />
                         <Restaurantes 
                             nome='La Dolce Vita Trattoria' 
@@ -59,7 +59,7 @@ const Body = () => {
                             Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, 
                             tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
                             nota="4.6"
-                            image="./public/macarrao.png"
+                            image="/macarrao.png"
                         />
                     </div>
                 </Items>
