@@ -1,7 +1,7 @@
 
 import ItemProduto from "../ItemProduto";
 import { Container } from "../../style"
-import { Item, Itens } from "./style"
+import {  Itens } from "./style"
 
 export type Restaurante = {
     id: number;
