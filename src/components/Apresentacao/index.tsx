@@ -1,24 +1,20 @@
-
-import { Fundo, Texto, Textos } from "./style"
-
+import { Fundo, Texto, Textos } from "./style";
 
 export type Props = {
-
-    size?:'small'|'big';
-
-}
-
-
-const Apresentacao = ()=>(
+    size?: 'small' | 'big';
+    tipo?: string;
+    nomerestaurante?: string;
+    imagem?: string;
     
-        <Fundo>
-                <Textos>
-                    <Texto >italiana</Texto>
-                    <Texto size='big'>La Dolce Vita Trattoria</Texto>
-                </Textos>
-        </Fundo>
-    
-    
-)
+};
 
-export default Apresentacao
+const Apresentacao = ({ tipo, nomerestaurante, imagem }: Props) => (
+    <Fundo imagem={imagem}>
+        <Textos>
+            <Texto>{tipo}</Texto>
+            <Texto size='big'>{nomerestaurante}</Texto>
+        </Textos>
+    </Fundo>
+);
+
+export default Apresentacao;

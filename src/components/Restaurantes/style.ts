@@ -8,6 +8,7 @@ export const Restaurante = styled.div`
     height: 398px;
     width: 472px;
     margin-bottom:56px;
+    
 `;
 
 export const Botao = styled.button<Props>`
@@ -17,9 +18,8 @@ export const Botao = styled.button<Props>`
     font-size: ${(props) => (props.size === 'big' ? '14px' : '12px')};
     font-weight: 700;
     border: none;
-    margin-top:12px;
-    margin-left: 5px;
     cursor:pointer;
+    margin-left:6px;
     
 `;
 

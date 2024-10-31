@@ -3,15 +3,13 @@ import { Props } from ".";
 import { Cores } from "../../style";
 
 
-export const Fundo = styled.div`
-
-    background-image: url('/macarraoescuro.png');
-    background-position: center ;
+export const Fundo = styled.div<Props>`
+    background-image: url(${(props) => props.imagem});
+    background-position: center;
     height: 280px;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
-
-`
+`;
 
 export const Textos = styled.div`
     display:flex;

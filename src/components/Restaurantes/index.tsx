@@ -5,13 +5,16 @@ import { Botao, Descricao, Imagemrestaurante, Nota, Paragrafo, Restaurante } fro
 
 
 export type Props = {
+    id?: number;
+    
     size?: 'small' | 'big';
     children?: React.ReactNode;
     descricao?: string;
-    nota?:string;
+    nota?:number;
     nome?:string;
     image?:string;
-    italia?:boolean;
+    categoria?:string[]
+    Tolink?:string;
 };
 
 
@@ -19,28 +22,13 @@ export const Fragmento = ({ size = 'small', children }: Props) => (
     <Paragrafo size={size}>{children}</Paragrafo>
 );
 
-const Atributos = ({ italia = true }: Props) => {
-    return (
-        <>
-            {italia ? (
-                
-                <Botao>Italiana</Botao>
-                
-            ) : (
-                <>
-                    <Botao>Destaque da semana</Botao>
-                    <Botao>Japonesa</Botao>
-                </>
-            )}
-        </>
-    );
-};
 
-const Restaurantes = ({nome,nota,descricao,image,italia}:Props) => (
+
+const Restaurantes = ({nome,nota,descricao,image,id}:Props) => (
     <Restaurante>
         <Imagemrestaurante image={image}>
             <div className="botoes_imagem_restaurante">
-                <Atributos italia={italia}></Atributos>
+                
             </div>
         </Imagemrestaurante>
         <Descricao>
@@ -53,9 +41,8 @@ const Restaurantes = ({nome,nota,descricao,image,italia}:Props) => (
                     {descricao}
                 </p>
             </Fragmento>
-            <Link to='/perfil'>
+            <Link to={`/perfil/${id}`}>
                 <Botao>Saiba mais
-                    
                 </Botao> 
             </Link>
         </Descricao>
