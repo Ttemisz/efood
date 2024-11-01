@@ -1,13 +1,21 @@
-class  Restaurante{
-    image:string
-    descricao:string
-    nota:string
-
-    constructor(image:string,descricao:string,nota:string){
-        this.image= image
-        this.descricao = descricao
-        this.nota = nota
-    }
-}
-
+export type Restaurante = {
+    produtos: Restaurante[];
+    id: number;
+    titulo: string;
+    destacado: boolean;
+    tipo: string;
+    avaliacao: number;
+    descricao: string;
+    capa: string;
+    cardapio:[
+        {
+            foto: string;
+            preco: number;
+            id: number;
+            nome: string;
+            descricao: string;
+            porcao: string;
+        }
+    ]
+};
 export default Restaurante

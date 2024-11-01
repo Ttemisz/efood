@@ -1,16 +1,22 @@
-
+import { Provider } from "react-redux";
 import Rotas from "./routes";
 import { GlobalCss } from "./style"
 
 import { BrowserRouter } from "react-router-dom";
+import { store } from "./store";
+import Cart from "./components/cart";
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
       <GlobalCss></GlobalCss>
       <Rotas/>
+      <Cart/>
     </BrowserRouter>
+    </Provider>
+  
   )
 }
 

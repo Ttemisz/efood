@@ -1,37 +1,34 @@
-import Produtos from "../../Produtos"
-import Footer from "../../footer"
-import Headerperfil from "../../Header"
-import { Fundo } from "./style"
-import { useEffect, useState } from "react"
-import { Restaurante } from "../../Body"
-import { useParams } from "react-router-dom"
-import HeaderApresentacao from "../../HeaderApresentacao"
-
+import Produtos from "../../Produtos";
+import Footer from "../../footer";
+import Headerperfil from "../../Header";
+import { Fundo } from "./style";
+import HeaderApresentacao from "../../HeaderApresentacao";
+import { useGetFeatureRestauranteQuery } from "../../../services/api";
+import { useParams } from "react-router-dom";
 
 const Perfil = () => {
-    const [produt, setProduto] = useState<Restaurante[]>([]);
-    const [restaurant, setRestaurant] = useState<Restaurante | null>(null); 
-    const {id} = useParams()
-
-    useEffect(() => {
-        fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
-            .then((res) => res.json())
-            .then((res) => {
-                console.log(res); 
-                setProduto([res]);
-                setRestaurant(res);
-            });
-    }, [id]);
+    const { id } = useParams();
+    
     
 
-    return (
-        <Fundo>
-            <Headerperfil />
-            <HeaderApresentacao foods={restaurant}></HeaderApresentacao>
-            <Produtos cardapio={produt} /> 
-            <Footer />
-        </Fundo>
-    );
+    const { data: restaurant, isLoading } = useGetFeatureRestauranteQuery(id!);
+
+    if (isLoading) {
+        return <p>Carregando...</p>;
+    }
+
+    if(restaurant){
+        return (
+            <Fundo>
+                <Headerperfil />
+                <HeaderApresentacao foods={restaurant} />
+                <Produtos cardapio={restaurant ? [restaurant] : []} />
+                <Footer />
+            </Fundo>
+        );
+    }
+    
+    return <h4>provalvelmente a pagina nao existe</h4>
 };
 
-export default Perfil
+export default Perfil;
