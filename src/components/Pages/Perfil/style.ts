@@ -3,4 +3,5 @@ import { Cores } from "../../../style";
 
 export const Fundo = styled.div`
      background-color:${Cores.Creme};
+     
 `

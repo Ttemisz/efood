@@ -6,7 +6,6 @@ import { Botao, Descricao, Imagemrestaurante, Nota, Paragrafo, Restaurante } fro
 
 export type Props = {
     id?: number;
-    
     size?: 'small' | 'big';
     children?: React.ReactNode;
     descricao?: string;
@@ -15,11 +14,13 @@ export type Props = {
     image?:string;
     categoria?:string[]
     Tolink?:string;
+    onClick?: () => void;
 };
 
 
-export const Fragmento = ({ size = 'small', children }: Props) => (
-    <Paragrafo size={size}>{children}</Paragrafo>
+
+export const Fragmento = ({ size = 'small', children, onClick }: Props) => (
+    <Paragrafo onClick={onClick} size={size}>{children}</Paragrafo>
 );
 
 
