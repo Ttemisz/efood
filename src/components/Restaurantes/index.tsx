@@ -42,7 +42,9 @@ const Restaurantes = ({nome,nota,descricao,image,id}:Props) => (
                     {descricao}
                 </p>
             </Fragmento>
-            <Link to={`/perfil/${id}`}>
+            <Link style={{
+        textDecoration: 'none'
+    }} to={`/perfil/${id}`}>
                 <Botao>Saiba mais
                 </Botao> 
             </Link>
