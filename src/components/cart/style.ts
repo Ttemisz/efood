@@ -51,7 +51,7 @@ export const  Valores = styled.div`
 
 
 
-export const Button = styled.div`
+export const Button = styled.button`
     background-color: ${Cores.CremePessego}; 
     color: ${Cores.VermelhoCoral};
     width: 344px;
