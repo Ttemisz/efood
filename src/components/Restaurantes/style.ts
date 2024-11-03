@@ -11,15 +11,23 @@ export const Restaurante = styled.div`
     
 `;
 
-export const Botao = styled.button<Props>`
+export const Botao = styled.div<Props>`
     background-color: ${Cores.VermelhoCoral};
     color: ${Cores.CremePessego};
     padding: 8px 6px;
     font-size: ${(props) => (props.size === 'big' ? '14px' : '12px')};
     font-weight: 700;
     border: none;
-    cursor:pointer;
-    margin-left:6px;
+    cursor: pointer;
+    margin-left: 6px;
+    
+    text-decoration: none;
+    height: 24px;
+    width: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     
 `;
 
@@ -32,12 +40,16 @@ export const Imagemrestaurante = styled.div<Props>`
 
     .botoes_imagem_restaurante {
         padding: 16px;
-        display: flex;
-        justify-content: flex-end;
+        
     }
 `;
 
-export const Descricao = styled.div`  
+export const Descricao = styled.div`
+    height: 181px;
+    width: 472px;  
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     .restaurante_nota {
         display: flex;
         justify-content: space-between;
@@ -51,7 +63,7 @@ export const Paragrafo = styled.p<Props>`
     font-weight: ${(props) => (props.size === 'big' ? '700' : '400')};
     
     p {
-        margin: 16px 8px 20px 8px;
+        margin: 16px 8px  8px;
     }
 `;
 

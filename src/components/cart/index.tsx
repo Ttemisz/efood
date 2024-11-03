@@ -2,12 +2,16 @@ import { Button, CartContainer, CartItem, Overlay, Sidebar, Valores } from "./st
 
 import { useDispatch, useSelector } from "react-redux"
 import { RootReducer } from "../../store"
-import { close,remove } from '../../store/reducers/cart'
+import { close,remove,openEntrega } from '../../store/reducers/cart'
 
 const Cart = () => {
     const { isOpen, items } = useSelector((state: RootReducer) => state.cart);
     const dispatch = useDispatch();
+    const abrindoEntrega = () => (
 
+        dispatch(openEntrega()),
+        dispatch(close())
+    )
     const closeCart = () => {
         dispatch(close());
     }
@@ -24,6 +28,7 @@ const Cart = () => {
     const removeItem = (id:number) => {
         dispatch(remove(id))
     }
+    
     
     return (
         <CartContainer className={isOpen ? 'is-open' : ''}>
@@ -47,7 +52,7 @@ const Cart = () => {
                     <p>Valor total</p>
                     <p>R$ {getTotalPrice()}</p> 
                 </Valores>
-                <Button>Continuar com a entrega</Button>
+                <Button onClick={abrindoEntrega}>Continuar com a entrega</Button>
             </Sidebar>
         </CartContainer>
     )

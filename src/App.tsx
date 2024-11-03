@@ -5,15 +5,21 @@ import { GlobalCss } from "./style"
 import { BrowserRouter } from "react-router-dom";
 import { store } from "./store";
 import Cart from "./components/cart";
+import Entrega from "./components/Entrega";
+import Pagamento from "./components/Pagamento";
+import Confirmacao from "./components/Confirmacao";
 
 function App() {
-
+  
   return (
     <Provider store={store}>
       <BrowserRouter>
       <GlobalCss></GlobalCss>
       <Rotas/>
       <Cart/>
+      <Entrega />
+      <Pagamento />
+      <Confirmacao />
     </BrowserRouter>
     </Provider>
   
