@@ -52,7 +52,12 @@ const Cart = () => {
                     <p>Valor total</p>
                     <p>R$ {getTotalPrice()}</p> 
                 </Valores>
-                <Button onClick={abrindoEntrega}>Continuar com a entrega</Button>
+                {items.length === 0 && ( 
+                    <small style={{ color: "red", fontWeight: "bold" }}>
+                        Adicione pelo menos um item ao carrinho para continuar.
+                    </small>
+                )}
+                <Button onClick={abrindoEntrega} disabled={items.length === 0}>Continuar com a entrega</Button>
             </Sidebar>
         </CartContainer>
     )

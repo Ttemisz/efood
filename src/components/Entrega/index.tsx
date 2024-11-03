@@ -80,84 +80,101 @@ const Entrega = () => {
     return (
         <>
             <CartContainer className={isEntregaOpen ? 'is-open-cartentrega' : ''}>
-                <Overlay onClick={fecharEntrega} />
-                <Sidebar>
-                    <h3>Dados de entrega</h3>
-                    <form onSubmit={form.handleSubmit}>
-                        <InputGroup>
-                            <label htmlFor="fullName">Quem irá receber</label>
-                            <input
-                                id="fullName"
-                                name="fullName"
-                                type="text"
-                                onChange={form.handleChange}
-                                value={form.values.fullName}
-                                onBlur={form.handleBlur}
-                            />
-                            <small style={{color:"red", fontWeight:"bold"}}>{getErrorMessage('fullName',form.errors.fullName)}</small>
-                        </InputGroup>
-                        <InputGroup>
-                            <label htmlFor="endereco">Endereço</label>
-                            <input
-                                id="endereco"
-                                name="endereco"
-                                type="text"
-                                onChange={form.handleChange}
-                                value={form.values.endereco}
-                                onBlur={form.handleBlur}
-                            />
-                        </InputGroup>
-                        <InputGroup>
-                            <label htmlFor="cidade">Cidade</label>
-                            <input
-                                id="cidade"
-                                name="cidade"
-                                type="text"
-                                onChange={form.handleChange}
-                                value={form.values.cidade}
-                                onBlur={form.handleBlur}
-                            />
-                        </InputGroup>
-                        <CepNumero>
-                            <InputGroup>
-                                <label htmlFor="cep">CEP</label>
-                                <input
-                                    id="cep"
-                                    name="cep"
-                                    type="text"
-                                    onChange={form.handleChange}
-                                    value={form.values.cep}
-                                    onBlur={form.handleBlur}
-                                />
-                            </InputGroup>
-                            <InputGroup>
-                                <label htmlFor="numero">Número</label>
-                                <input
-                                    id="numero"
-                                    name="numero"
-                                    type="text"
-                                    onChange={form.handleChange}
-                                    value={form.values.numero}
-                                    onBlur={form.handleBlur}
-                                />
-                            </InputGroup>
-                        </CepNumero>
-                        <InputGroup>
-                            <label htmlFor="complemento">Complemento (opcional)</label>
-                            <input
-                                id="complemento"
-                                name="complemento"
-                                type="text"
-                                onChange={form.handleChange}
-                                value={form.values.complemento}
-                                onBlur={form.handleBlur}
-                            />
-                        </InputGroup>
-                        <Button type="submit">Continuar com o pagamento</Button>
-                    </form>
-                    <Button  onClick={VoltarCarrinho}>Voltar para o carrinho</Button>
-                </Sidebar>
-            </CartContainer>
+    <Overlay onClick={fecharEntrega} />
+    <Sidebar>
+        <h3>Dados de entrega</h3>
+        <form onSubmit={form.handleSubmit}>
+            <InputGroup>
+                <label htmlFor="fullName">Quem irá receber</label>
+                <input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    onChange={form.handleChange}
+                    value={form.values.fullName}
+                    onBlur={form.handleBlur}
+                />
+                <small style={{color:"red", fontWeight:"bold"}}>
+                    {getErrorMessage('fullName', form.errors.fullName)}
+                </small>
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="endereco">Endereço</label>
+                <input
+                    id="endereco"
+                    name="endereco"
+                    type="text"
+                    onChange={form.handleChange}
+                    value={form.values.endereco}
+                    onBlur={form.handleBlur}
+                />
+                <small style={{color:"red", fontWeight:"bold"}}>
+                    {getErrorMessage('endereco', form.errors.endereco)}
+                </small>
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="cidade">Cidade</label>
+                <input
+                    id="cidade"
+                    name="cidade"
+                    type="text"
+                    onChange={form.handleChange}
+                    value={form.values.cidade}
+                    onBlur={form.handleBlur}
+                />
+                <small style={{color:"red", fontWeight:"bold"}}>
+                    {getErrorMessage('cidade', form.errors.cidade)}
+                </small>
+            </InputGroup>
+            <CepNumero>
+                <InputGroup>
+                    <label htmlFor="cep">CEP</label>
+                    <input
+                        id="cep"
+                        name="cep"
+                        type="text"
+                        onChange={form.handleChange}
+                        value={form.values.cep}
+                        onBlur={form.handleBlur}
+                    />
+                    <small style={{color:"red", fontWeight:"bold"}}>
+                        {getErrorMessage('cep', form.errors.cep)}
+                    </small>
+                </InputGroup>
+                <InputGroup>
+                    <label htmlFor="numero">Número</label>
+                    <input
+                        id="numero"
+                        name="numero"
+                        type="text"
+                        onChange={form.handleChange}
+                        value={form.values.numero}
+                        onBlur={form.handleBlur}
+                    />
+                    <small style={{color:"red", fontWeight:"bold"}}>
+                        {getErrorMessage('numero', form.errors.numero)}
+                    </small>
+                </InputGroup>
+            </CepNumero>
+            <InputGroup>
+                <label htmlFor="complemento">Complemento (opcional)</label>
+                <input
+                    id="complemento"
+                    name="complemento"
+                    type="text"
+                    onChange={form.handleChange}
+                    value={form.values.complemento}
+                    onBlur={form.handleBlur}
+                />
+                <small style={{color:"red", fontWeight:"bold"}}>
+                    {getErrorMessage('complemento', form.errors.complemento)}
+                </small>
+            </InputGroup>
+            <Button type="submit">Continuar com o pagamento</Button>
+        </form>
+        <Button onClick={VoltarCarrinho}>Voltar para o carrinho</Button>
+    </Sidebar>
+</CartContainer>
         </>
     );
 }
