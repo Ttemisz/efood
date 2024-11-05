@@ -5,7 +5,7 @@ import { closePagamento, openEntrega, openProcessadoPedido, setOrderId } from '.
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 import { usePurchaseMutation } from "../../services/api";
-
+import InputMask from 'react-input-mask';
 
 
 
@@ -46,11 +46,10 @@ const Pagamento = () => {
         },
         validationSchema: Yup.object({
             nomeCartao: Yup.string().required('Campo obrigatório'),
-            numeroCartao: Yup.string().length(16, 'O número do cartão deve ter 16 dígitos').required('Campo obrigatório'),
-            cvv: Yup.string().length(3, 'O CVV deve ter 3 dígitos').required('Campo obrigatório'),
-            mesVencimento: Yup.string().length(2, 'O mês deve ter 2 dígitos').required('Campo obrigatório'),
-            anoVencimento: Yup.string().length(4, 'O ano deve ter 4 dígitos').required('Campo obrigatório'),
-        }),
+            numeroCartao: Yup.string()
+            .matches(/^\d{4} \d{4} \d{4} \d{4}$/, 'O número do cartão deve ser no formato "0000 0000 0000 0000"') 
+            .required('Campo obrigatório'),
+    }),
         onSubmit: async (values) => { 
                 const response = await purchase({
                     products: items.flatMap(item => 
@@ -123,10 +122,10 @@ const Pagamento = () => {
                         <NumeroCVV>
                             <InputGroup style={{ width: '228px' }}>
                                 <label htmlFor="numeroCartao">Número do cartão</label>
-                                <input
+                                <InputMask
                                     id="numeroCartao"
                                     name="numeroCartao"
-                                    type="text"
+                                    mask="9999 9999 9999 9999"
                                     onChange={form.handleChange}
                                     value={form.values.numeroCartao}
                                     onBlur={form.handleBlur}
@@ -135,10 +134,10 @@ const Pagamento = () => {
                             </InputGroup>
                             <InputGroup style={{ width: '87px' }}>
                                 <label htmlFor="cvv">CVV</label>
-                                <input
+                                <InputMask
                                     id="cvv"
                                     name="cvv"
-                                    type="text"
+                                    mask="999"
                                     onChange={form.handleChange}
                                     value={form.values.cvv}
                                     onBlur={form.handleBlur}
@@ -149,10 +148,10 @@ const Pagamento = () => {
                         <CepNumero>
                             <InputGroup>
                                 <label htmlFor="mesVencimento">Mês de vencimento</label>
-                                <input
+                                <InputMask
                                     id="mesVencimento"
                                     name="mesVencimento"
-                                    type="text"
+                                    mask="99"
                                     onChange={form.handleChange}
                                     value={form.values.mesVencimento}
                                     onBlur={form.handleBlur}
@@ -161,10 +160,10 @@ const Pagamento = () => {
                             </InputGroup>
                             <InputGroup>
                                 <label htmlFor="anoVencimento">Ano de vencimento</label>
-                                <input
+                                <InputMask
                                     id="anoVencimento"
                                     name="anoVencimento"
-                                    type="text"
+                                    mask="9999"
                                     onChange={form.handleChange}
                                     value={form.values.anoVencimento}
                                     onBlur={form.handleBlur}
