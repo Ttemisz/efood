@@ -28,7 +28,7 @@ const Pagamento = () => {
                 acumulador + 
                 (item.cardapio ? item.cardapio.reduce((subtotal, produto) => subtotal + produto.preco, 0) : 0)
             );
-        }, 0).toFixed(2);
+        }, 0).toLocaleString("pt-BR", { minimumFractionDigits: 2 });
     }
 
     const paraAConfirmacao = () => {
