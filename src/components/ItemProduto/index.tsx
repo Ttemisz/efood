@@ -64,7 +64,7 @@ const ItemProduto = ({ nome, id, imagem, descricao ,preco,porcao}: Props) => {
                             <h4>{nome}</h4>
                             <p>{descricao}</p>
                             <p>{porcao}</p>
-                            <span  onClick={addToCart} className="adicionar">Adicionar ao carrinho - R$ {preco}</span>
+                            <span  onClick={addToCart} className="adicionar">Adicionar ao carrinho - R$ {preco !== undefined ? preco.toLocaleString("pt-BR", { minimumFractionDigits: 2 }) : "Preço indisponível"}</span>
                         </div>
                     </div>
                     

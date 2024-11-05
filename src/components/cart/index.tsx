@@ -22,7 +22,7 @@ const Cart = () => {
                 acumulador + 
                 (item.cardapio ? item.cardapio.reduce((subtotal, produto) => subtotal + produto.preco, 0) : 0)
             );
-        }, 0).toFixed(2);
+        }, 0).toLocaleString("pt-BR", { minimumFractionDigits: 2 });
     }
 
     const removeItem = (id:number) => {
@@ -41,7 +41,7 @@ const Cart = () => {
                                 <img src={produto.foto } alt={produto.nome} />
                                 <div>
                                     <h3>{produto.nome}</h3>
-                                    <span>R$ {produto.preco}</span>
+                                    <span>R$ {produto.preco.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</span>
                                 </div>
                                 <button onClick={()=> removeItem(item.id)} type="button"></button>
                             </CartItem>
